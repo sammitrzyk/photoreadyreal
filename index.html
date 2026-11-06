@@ -364,13 +364,14 @@
 <a href="tel:+17173172862" style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; color: #F5F2EC; text-decoration: none">(717) 317-2862</a>
 <p style="margin: 0; font-family: 'IBM Plex Mono', monospace; font-size: 12.5px; letter-spacing: 0.04em; line-height: 1.8; color: #B8C3D3">Serving Harrisburg · Camp Hill · Mechanicsburg · Carlisle · and surrounding Central PA</p>
 </div>
-<form class="pr-form" aria-label="Plan my home's prep" style="align-self: center">
+<form class="pr-form" name="contact" method="POST" data-netlify="true" aria-label="Plan my home's prep" style="align-self: center">
+<input type="hidden" name="form-name" value="contact">
 <label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">I am a
-<select class="pr-input"><option>Homeowner getting ready to sell</option><option>Listing agent referring a seller</option><option>Family member helping a parent</option></select></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Name<input class="pr-input" type="text" autocomplete="name"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Phone<input class="pr-input" type="tel" autocomplete="tel"></label>
-<label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Property address<input class="pr-input" type="text" autocomplete="street-address"></label>
-<label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">When are you hoping to list?<input class="pr-input" type="text" placeholder="e.g. this spring, or not sure yet"></label>
+<select class="pr-input" name="role"><option>Homeowner getting ready to sell</option><option>Listing agent referring a seller</option><option>Family member helping a parent</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Name<input class="pr-input" type="text" name="name" autocomplete="name"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Phone<input class="pr-input" type="tel" name="phone" autocomplete="tel"></label>
+<label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Property address<input class="pr-input" type="text" name="address" autocomplete="street-address"></label>
+<label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">When are you hoping to list?<input class="pr-input" type="text" name="timeline" placeholder="e.g. this spring, or not sure yet"></label>
 <button class="pr-btn pr-btn-light pr-full" type="submit" style="border: 0; cursor: pointer; font: inherit; font-weight: 600">Plan my home's prep</button>
 </form>
 </div>

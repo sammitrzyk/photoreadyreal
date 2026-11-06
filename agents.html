@@ -195,14 +195,15 @@
 <p style="margin: 0; color: #B8C3D3; max-width: 40ch">Refer a seller now, or set up a coffee or a quick office visit so you know who you're sending your clients to.</p>
 <a href="tel:+17173172862" style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; color: #F5F2EC; text-decoration: none">(717) 317-2862</a>
 </div>
-<form class="pr-form" aria-label="Agent referral" style="align-self: center">
+<form class="pr-form" name="agent-referral" method="POST" data-netlify="true" aria-label="Agent referral" style="align-self: center">
+<input type="hidden" name="form-name" value="agent-referral">
 <label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">I'd like to
-<select class="pr-input"><option>Refer a seller now</option><option>Set up an intro (coffee or office visit)</option></select></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Your name<input class="pr-input" type="text" autocomplete="name"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Brokerage<input class="pr-input" type="text" autocomplete="organization"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Phone<input class="pr-input" type="tel" autocomplete="tel"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Hoping to list by<input class="pr-input" type="text" placeholder="e.g. next month"></label>
-<label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Property address (optional)<input class="pr-input" type="text"></label>
+<select class="pr-input" name="intent"><option>Refer a seller now</option><option>Set up an intro (coffee or office visit)</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Your name<input class="pr-input" type="text" name="name" autocomplete="name"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Brokerage<input class="pr-input" type="text" name="brokerage" autocomplete="organization"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Phone<input class="pr-input" type="tel" name="phone" autocomplete="tel"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Hoping to list by<input class="pr-input" type="text" name="timeline" placeholder="e.g. next month"></label>
+<label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Property address (optional)<input class="pr-input" type="text" name="address"></label>
 <button class="pr-btn pr-btn-light pr-full" type="submit" style="border: 0; cursor: pointer; font: inherit; font-weight: 600">Send to PhotoReady</button>
 </form>
 </div>
