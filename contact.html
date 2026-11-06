@@ -66,15 +66,16 @@
 <a href="tel:+17173172862" style="font-family: 'IBM Plex Mono', monospace; font-size: 22px; color: #F5F2EC; text-decoration: none">(717) 317-2862</a>
 <a href="mailto:sam@photoreadyprep.com" style="font-family: 'IBM Plex Mono', monospace; font-size: 15px; color: #B8C3D3; text-decoration: none">sam@photoreadyprep.com</a>
 </div>
-<form class="pr-form" aria-label="Plan my home's prep" style="align-self: center">
+<form class="pr-form" name="contact" method="POST" data-netlify="true" aria-label="Plan my home's prep" style="align-self: center">
+<input type="hidden" name="form-name" value="contact">
 <label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">I am a
-<select class="pr-input"><option>Homeowner getting ready to sell</option><option>Family member helping a parent</option><option>Listing agent referring a seller</option></select></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Name<input class="pr-input" type="text" autocomplete="name"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Phone<input class="pr-input" type="tel" autocomplete="tel"></label>
-<label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Property address<input class="pr-input" type="text" autocomplete="street-address"></label>
-<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">When are you hoping to list?<input class="pr-input" type="text" placeholder="or “not sure yet”"></label>
+<select class="pr-input" name="role"><option>Homeowner getting ready to sell</option><option>Family member helping a parent</option><option>Listing agent referring a seller</option></select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Name<input class="pr-input" type="text" name="name" autocomplete="name"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Phone<input class="pr-input" type="tel" name="phone" autocomplete="tel"></label>
+<label class="pr-full" style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Property address<input class="pr-input" type="text" name="address" autocomplete="street-address"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">When are you hoping to list?<input class="pr-input" type="text" name="timeline" placeholder="or “not sure yet”"></label>
 <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 600">Biggest worry
-<select class="pr-input"><option>All the stuff</option><option>Paint and repairs</option><option>The outside</option><option>Not sure where to start</option></select></label>
+<select class="pr-input" name="worry"><option>All the stuff</option><option>Paint and repairs</option><option>The outside</option><option>Not sure where to start</option></select></label>
 <button class="pr-btn pr-btn-light pr-full" type="submit" style="border: 0; cursor: pointer; font: inherit; font-weight: 600">Send it</button>
 </form>
 </div>
