@@ -48,11 +48,11 @@
     });
   }
 
-  // Forms: replace the handler below with your form service
-  // (Formspree, Netlify Forms, Wix, or your CRM webhook) before launch.
+  // Forms: submit to Netlify Forms via AJAX so the page doesn't reload.
   document.querySelectorAll('form.pr-form').forEach(function (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
       var msg = form.querySelector('.pr-form-status');
       if (!msg) {
         msg = document.createElement('p');
@@ -60,7 +60,23 @@
         msg.setAttribute('role', 'status');
         form.appendChild(msg);
       }
-      msg.textContent = 'Thanks. We got your details and will call you to set up a walkthrough.';
+
+      var submitBtn = form.querySelector('button[type=submit]');
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      }).then(function (res) {
+        if (!res.ok) throw new Error('Submission failed');
+        form.reset();
+        msg.textContent = 'Thanks. We got your details and will call you to set up a walkthrough.';
+      }).catch(function () {
+        msg.textContent = 'Something went wrong sending that. Please call us at (717) 317-2862 or try again.';
+      }).finally(function () {
+        if (submitBtn) submitBtn.disabled = false;
+      });
     });
   });
 })();
